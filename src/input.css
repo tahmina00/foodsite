@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+h2{
+    @apply text-[50px] font-bold leading-[60px]
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1170px;
+  --font-inter: "Inter", sans-serif;
+  --spacing-custom-px: 59.75px;
+  --spacing-custom-py: 42px;
+  --shadow-btn:0px 4px 14px rgba(255,255,255,0.25);
+}
+
+@utility container{
+  margin-inline: auto;
+}
+
+@utility btn {
+  @apply py-5 px-15 bg-white text-black text-lg font-bold leading-7 rounded-full shadow-btn
+}
+
+@utility foodimage {
+  @apply max-h-full object-contain mx-auto group-hover:scale-125 ease-linear duration-300 hover:rotate-13
+}
+@utility foodimageanticlock {
+  @apply max-h-full object-contain mx-auto group-hover:scale-125 ease-linear duration-300 hover:-rotate-13
+}
+@utility forinputtext{
+  @apply pl-[30px] py-[20px] pr-[400px] rounded-full mr-[20px] mt-[40px] border border-black placeholder-black font-bold text-lg text-white
+}
+
+footer li {
+  @apply text-lg leading-8
+}
+
+@utility bottomsocial{
+  @apply pt-[28px] pb-[40px] border-t border-[#4f4f4f] mt-[60px]
+}
+.pulse{
+    width: 100px;
+    height: 100px;
+    background: #FFf;
+    line-height: 100px;
+    animation: animate-pulse 3s linear infinite;
+    cursor: pointer
+}
+
+@keyframes animate-pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(247, 247, 247, 0.7),  0 0 0 0 rgba(253, 253, 253, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 0 rgba(244, 242, 242, 0.7);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
+    
+}
